@@ -10,6 +10,14 @@
             color: white;
         }
 
+        .title {
+            text-align: center;
+            font-size: 28px;
+            padding: 15px;
+            font-weight: bold;
+            background: #111;
+        }
+
         nav {
             background: #202020;
             padding: 15px;
@@ -17,9 +25,10 @@
             justify-content: center;
             gap: 15px;
             border-bottom: 2px solid #333;
-            position: sticky;
-            top: 0;
-            z-index: 10;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         button {
@@ -43,19 +52,10 @@
             background: #555;
         }
 
-        iframe {
-            width: 100%;
-            height: calc(100vh - 70px);
-            border: none;
-            border-top: 2px solid #333;
-        }
-
-        .title {
+        .content {
             text-align: center;
-            font-size: 28px;
-            padding: 10px;
-            font-weight: bold;
-            background: #111;
+            margin-top: 50px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -64,17 +64,18 @@
     <div class="title">🎮 QWERTY Games</div>
 
     <nav>
-        <button onclick="loadGame('https://xr-skull-dev.github.io/QWERTY-games/games/snake.html')">Snake</button>
-        <button onclick="loadGame('games/game2.html')">Game 2</button>
+        <a href="https://xr-skull-dev.github.io/QWERTY-games/games/snake.html">
+            <button>Snake</button>
+        </a>
+
+        <a href="games/game2.html">
+            <button>Game 2</button>
+        </a>
     </nav>
 
-    <iframe id="gameFrame"></iframe>
-
-    <script>
-        function loadGame(url) {
-            document.getElementById('gameFrame').src = url;
-        }
-    </script>
+    <div class="content">
+        <p>⬆ Pick a game!</p>
+    </div>
 
 </body>
 </html>
